@@ -1,0 +1,13 @@
+html
+  head
+    title Panager
+    = favicon_link_tag ('logo.ico')
+    = stylesheet_link_tag    'application'
+    = stylesheet_link_tag    'landing'
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    = csrf_meta_tags
+  body#page-top.landing-page
+    .page-wrapper
+      = yield
+    = javascript_include_tag 'application', debug: false
+    = javascript_include_tag 'landing', debug: false
